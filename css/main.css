@@ -1808,7 +1808,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6aadff;
+  background: #da99c1;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2970,8 +2970,12 @@ pre .javascript .function {
   }
 }
 body {
-  background: url("http://i-7.vcimg.com/trim/617f2252f0bf2aa57d215beaf55db134152615/trim.jpg") no-repeat;
+  background: url("http://i-7.vcimg.com/trim/617f2252f0bf2aa57d215beaf55db134152615/trim.jpg");
   background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
 }
 .main-inner {
   background: #fff;
