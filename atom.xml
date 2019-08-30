@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Zhuda&#39;s home</title>
+  
+  <subtitle>Talk is cheap, show me the code!</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-08-30T05:47:38.704Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Zhuda</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第一个文章</title>
+    <link href="http://yoursite.com/2019/08/30/%E6%96%87%E7%AB%A0%E5%90%8D%E7%A7%B0/"/>
+    <id>http://yoursite.com/2019/08/30/文章名称/</id>
+    <published>2019-08-30T05:33:45.000Z</published>
+    <updated>2019-08-30T05:47:38.704Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#前言&lt;br&gt;很早就有过想拥有一个自己的网站的想法，直到现在才匆匆动身，试一下&lt;a href=&quot;https://baidu.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;链接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意！！！&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="云服务器" scheme="http://yoursite.com/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="web" scheme="http://yoursite.com/tags/web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2019/08/30/hello-world/"/>
+    <id>http://yoursite.com/2019/08/30/hello-world/</id>
+    <published>2019-08-30T02:49:37.454Z</published>
+    <updated>2019-08-30T02:49:37.454Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
