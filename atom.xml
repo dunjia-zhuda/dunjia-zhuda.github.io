@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-30T05:47:38.704Z</updated>
+  <updated>2019-08-30T09:19:56.754Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>未来的思考方向？</title>
+    <link href="http://yoursite.com/2019/08/30/%E6%9C%AA%E6%9D%A5%E7%9A%84%E6%80%9D%E8%80%83%E6%96%B9%E5%90%91%EF%BC%9F/"/>
+    <id>http://yoursite.com/2019/08/30/未来的思考方向？/</id>
+    <published>2019-08-30T09:19:56.000Z</published>
+    <updated>2019-08-30T09:19:56.754Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>第一个文章</title>
