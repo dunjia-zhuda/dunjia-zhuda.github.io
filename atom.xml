@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-31T02:15:02.077Z</updated>
+  <updated>2019-08-31T02:33:00.140Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,25 +17,23 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>github基础操作</title>
     <link href="http://yoursite.com/2019/08/31/github%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/"/>
     <id>http://yoursite.com/2019/08/31/github基础操作/</id>
-    <published>2019-08-31T02:13:26.881Z</published>
-    <updated>2019-08-31T02:15:02.077Z</updated>
+    <published>2019-08-30T16:00:00.000Z</published>
+    <updated>2019-08-31T02:33:00.140Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;#前言#&lt;/p&gt;
-&lt;h1 id=&quot;github-基础操作&quot;&gt;&lt;a href=&quot;#github-基础操作&quot; class=&quot;headerlink&quot; title=&quot;github 基础操作&quot;&gt;&lt;/a&gt;github 基础操作&lt;/h1&gt;&lt;h2 id=&quot;git-init&quot;&gt;&lt;a
-        
-      
+      &lt;p&gt;#前言#&lt;/p&gt;
+&lt;h1 id=&quot;github-基础操作&quot;&gt;&lt;a href=&quot;#github-基础操作&quot; class=&quot;headerlink&quot; title=&quot;github 基础操作&quot;&gt;&lt;/a&gt;github 基础操作&lt;/h1&gt;
     
     </summary>
     
+      <category term="软件工具" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
     
   </entry>
   
