@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2F2019%2F08%2F31%2Fgithub%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%2F</url>
+    <content type="text"><![CDATA[#前言# github 基础操作git init初始化本地 git 仓库git add README.md添加 README.md 文件git status展示当前本地仓库的状态，查看刚刚添加进去修改的文件git reset filename.md从暂存区删除指定文件touch .gitignore规定不上传的文件git branch branchName创建一个新的分支git checkout branchname切换到新的分支git merge branchname分支合并git pull从远程存储库提取最新版本。更新本地版本git commit -m “first commit”上传注释上传到本地暂存区git remote add origin git@github.com:dunjia-zhuda/true-live.git链接远程 github 仓库git push -u origin master#同步到远程仓库# git config —global user.name “Your Name”git config —global user.email “yourEmail@mail.com”装了 github 之后初始化一次就行git add .把项目文件夹下的所有文件都放进暂存区。git add *.html把项目文件夹下的所有.html 文件都放进暂存区，当然你可以换成其他任何扩展名，就把该扩展名的所有文件都放进暂存区。还有不会的就看这个 github 指南大全#分支管理#1,从已有的分支创建新的分支(如从 master 分支),创建一个 dev 分支 git checkout -b dev2,创建完可以查看一下,分支已经切换到 dev git branch * dev master 3,提交该分支到远程仓库 git push origin dev4,测试从远程获取 dev git pull origin dev或者： 如果用命令行，运行 git fetch，可以将远程分支信息获取到本地，再运行git checkout -b local-branchname origin/remote_branchname 就可以将远程分支映射到本地命名为 local-branchname 的一分支 5,我觉得现在重要的就是设置 git push,pull 默认的提交获取分支,这样就很方便的使用 git push 提交信息或 git pull 获取信息 git branch --set-upstream-to=origin/dev取消对 master 的跟踪 git branch --unset-upstream master]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[2019/8/30记录]]></title>
     <url>%2F2019%2F08%2F30%2F2019-8-30%E8%AE%B0%E5%BD%95%2F</url>
     <content type="text"><![CDATA[#前言今天花了 7 个小时做了这个 hexo 博客，我不知道能坚持多久，反正能写多少写多少吧~我对自己的期望就是前端初级工程师吧，虽然现在很菜很菜很菜，但是还是想说搞一个技术活，之前也没写过这方面的东西，只能边摸索边搞了。也好把自己学的东西好好总结一下。。 #规划接下来的目标主要是哪方面呢？原生 jsES6VUEHTML5CSS3 Node.jsKoa2Express MysqlMongodb Linux]]></content>
