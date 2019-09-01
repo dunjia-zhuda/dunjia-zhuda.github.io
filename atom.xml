@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-31T02:33:00.140Z</updated>
+  <updated>2019-09-01T06:51:01.249Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>奇门旨归  节选</title>
+    <link href="http://yoursite.com/2019/10/01/%E5%A5%87%E9%97%A8%E6%97%A8%E5%BD%92%20%E8%8A%82%E9%80%89/"/>
+    <id>http://yoursite.com/2019/10/01/奇门旨归 节选/</id>
+    <published>2019-09-30T16:00:00.000Z</published>
+    <updated>2019-09-01T06:51:01.249Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;#古文&lt;/p&gt;
+&lt;h2 id=&quot;凡例&quot;&gt;&lt;a href=&quot;#凡例&quot; class=&quot;headerlink&quot; title=&quot;凡例&quot;&gt;&lt;/a&gt;凡例&lt;/h2&gt;&lt;p&gt;&lt;em&gt;一、奇门作用，专重时方，时方真正，捷于影响，无不应验，如吉格在午时、午方，
+        
+      
+    
+    </summary>
+    
+      <category term="奇门遁甲" scheme="http://yoursite.com/categories/%E5%A5%87%E9%97%A8%E9%81%81%E7%94%B2/"/>
+    
+    
+      <category term="奇门遁甲" scheme="http://yoursite.com/tags/%E5%A5%87%E9%97%A8%E9%81%81%E7%94%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>github基础操作</title>
