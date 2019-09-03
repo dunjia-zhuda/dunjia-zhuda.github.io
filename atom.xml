@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-03T07:14:16.911Z</updated>
+  <updated>2019-09-03T14:30:14.294Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ES6 class语法使用</title>
+    <link href="http://yoursite.com/2019/09/03/ES6_Class/"/>
+    <id>http://yoursite.com/2019/09/03/ES6_Class/</id>
+    <published>2019-09-03T14:15:25.000Z</published>
+    <updated>2019-09-03T14:30:14.294Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#前言&lt;/p&gt;
+&lt;h1 id=&quot;本文节选自阮一峰ES6教程&quot;&gt;&lt;a href=&quot;#本文节选自阮一峰ES6教程&quot; class=&quot;headerlink&quot; title=&quot;本文节选自阮一峰ES6教程&quot;&gt;&lt;/a&gt;本文节选自阮一峰ES6教程&lt;/h1&gt;&lt;p&gt;在js中，生成实例对象的传统方法是通过构造函数&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;function Body(x,y){
+    this.x = x;  //属性
+    this.y = y;
+}
+Body.prototype.toString = function(){
+    return &amp;quot;i love you&amp;quot;  //方法
+};
+var p = new Body(1,2);  //构造函数&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+      <category term="ES6" scheme="http://yoursite.com/categories/ES6/"/>
+    
+    
+      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
+    
+  </entry>
   
   <entry>
     <title>奇门旨归  节选</title>
