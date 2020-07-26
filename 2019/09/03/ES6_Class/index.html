@@ -78,12 +78,10 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="ES6,">
+  <meta name="keywords" content="JS,">
 
 
 
-
-  
 
 
   <link rel="alternate" href="/atom.xml" title="Zhuda's home" type="application/atom+xml">
@@ -98,18 +96,18 @@
 
 
 
-<meta name="description" content="#前言 本文节选自阮一峰ES6教程在js中，生成实例对象的传统方法是通过构造函数 function Body(x,y){     this.x = x;  //属性     this.y = y; } Body.prototype.toString = function(){     return &amp;quot;i love you&amp;quot;  //方法 }; var p = new Body(1">
-<meta name="keywords" content="ES6">
+<meta name="description" content="##Array对象##数组属性：constructor 返回创建数组对象的原型函数length   设置或返回数组元素的个数prototype  允许我向数组对象添加属性或者方法 ##Boolean对象## ##Date对象## ##Math对象## ##Number对象## ##String对象## ##RegExp对象## ##全局属性/函数## ##运算符##">
+<meta name="keywords" content="JS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ES6 class语法使用">
+<meta property="og:title" content="JS基础对象及使用方法">
 <meta property="og:url" content="http://yoursite.com/2019/09/03/ES6_Class/index.html">
 <meta property="og:site_name" content="Zhuda&#39;s home">
-<meta property="og:description" content="#前言 本文节选自阮一峰ES6教程在js中，生成实例对象的传统方法是通过构造函数 function Body(x,y){     this.x = x;  //属性     this.y = y; } Body.prototype.toString = function(){     return &amp;quot;i love you&amp;quot;  //方法 }; var p = new Body(1">
+<meta property="og:description" content="##Array对象##数组属性：constructor 返回创建数组对象的原型函数length   设置或返回数组元素的个数prototype  允许我向数组对象添加属性或者方法 ##Boolean对象## ##Date对象## ##Math对象## ##Number对象## ##String对象## ##RegExp对象## ##全局属性/函数## ##运算符##">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-03T14:30:14.294Z">
+<meta property="og:updated_time" content="2019-10-17T07:30:02.614Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ES6 class语法使用">
-<meta name="twitter:description" content="#前言 本文节选自阮一峰ES6教程在js中，生成实例对象的传统方法是通过构造函数 function Body(x,y){     this.x = x;  //属性     this.y = y; } Body.prototype.toString = function(){     return &amp;quot;i love you&amp;quot;  //方法 }; var p = new Body(1">
+<meta name="twitter:title" content="JS基础对象及使用方法">
+<meta name="twitter:description" content="##Array对象##数组属性：constructor 返回创建数组对象的原型函数length   设置或返回数组元素的个数prototype  允许我向数组对象添加属性或者方法 ##Boolean对象## ##Date对象## ##Math对象## ##Number对象## ##String对象## ##RegExp对象## ##全局属性/函数## ##运算符##">
 
 
 
@@ -144,7 +142,7 @@
 
 
 
-  <title>ES6 class语法使用 | Zhuda's home</title>
+  <title>JS基础对象及使用方法 | Zhuda's home</title>
   
 
 
@@ -304,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ES6 class语法使用</h1>
+          <h1 class="post-title" itemprop="name headline">JS基础对象及使用方法</h1>
         
 
         <div class="post-meta">
@@ -339,8 +337,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ES6/" itemprop="url" rel="index">
-                    <span itemprop="name">ES6</span>
+                  <a href="/categories/JS/" itemprop="url" rel="index">
+                    <span itemprop="name">JS</span>
                   </a>
                 </span>
 
@@ -376,68 +374,16 @@
       
 
       
-        <p>#前言</p>
-<h1 id="本文节选自阮一峰ES6教程"><a href="#本文节选自阮一峰ES6教程" class="headerlink" title="本文节选自阮一峰ES6教程"></a>本文节选自阮一峰ES6教程</h1><p>在js中，生成实例对象的传统方法是通过构造函数</p>
-<pre><code>function Body(x,y){
-    this.x = x;  //属性
-    this.y = y;
-}
-Body.prototype.toString = function(){
-    return &quot;i love you&quot;  //方法
-};
-var p = new Body(1,2);  //构造函数</code></pre><a id="more"></a>
-<p>ES6中引入了Class(类)的概念</p>
-<pre><code>class Body{
-    constructor(x,y){
-        this.x = x;
-        this.y = y;
-    }
-    toString(){
-        return &quot;i love you&quot;
-    }
-}</code></pre><p>类的数据类型就是函数，类本身就指向构造函数<br>使用的时候，也是直接对类使用new命令，跟构造函数的用法一样</p>
-<pre><code>class Bay{
-    doSomething(){
-        console.log(&apos;do something&apos;)
-    }
-}
-var p = new Bar()
-p.doSomething()</code></pre><p>构造函数的prototype属性，在ES6上依然存在，事实上，类的所有方法都定义在类的prototype属性上面</p>
-<pre><code>class Point {
-  constructor() {
-// ...
-  }
+        <p>##Array对象##<br>数组属性：<br>constructor 返回创建数组对象的原型函数<br>length   设置或返回数组元素的个数<br>prototype  允许我向数组对象添加属性或者方法</p>
+<p>##Boolean对象##</p>
+<p>##Date对象##</p>
+<p>##Math对象##</p>
+<p>##Number对象##</p>
+<p>##String对象##</p>
+<p>##RegExp对象##</p>
+<p>##全局属性/函数##</p>
+<p>##运算符##</p>
 
-  toString() {
-// ...
-  }
-
-  toValue() {
-// ...
-  }
-}
-
-// 等同于
-
-Point.prototype = {
-  constructor() {},
-  toString() {},
-  toValue() {},
-};</code></pre><p>在类的实例上调用方法，其实就是调用原型上的方法。</p>
-<pre><code>class B {}
-let b = new B();
-
-b.constructor === B.prototype.constructor // true</code></pre><p>由于类的方法都定义在prototype对象上面，所以类的新方法可以添加在prototype对象上面。Object.assign方法可以很方便地一次向类添加多个方法。</p>
-<pre><code>class Point {
-  constructor(){
-// ...
-  }
-}
-
-Object.assign(Point.prototype, {
-  toString(){},
-  toValue(){}
-});</code></pre>
       
     </div>
     
@@ -465,7 +411,7 @@ Object.assign(Point.prototype, {
       
         <div class="post-tags">
           
-            <a href="/tags/ES6/" rel="tag"><i class="fa fa-tag"></i>ES6</a>
+            <a href="/tags/JS/" rel="tag"><i class="fa fa-tag"></i>JS</a>
           
         </div>
       
@@ -478,7 +424,7 @@ Object.assign(Point.prototype, {
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/03/烟波钓叟歌/" rel="next" title="奇门旨归  节选">
+              <a href="/2019/09/01/奇门旨归 节选/" rel="next" title="奇门旨归  节选">
                 <i class="fa fa-chevron-left"></i> 奇门旨归  节选
               </a>
             
@@ -487,6 +433,10 @@ Object.assign(Point.prototype, {
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/04/奇门入门/" rel="prev" title="奇门遁甲--入门">
+                奇门遁甲--入门 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -538,17 +488,8 @@ Object.assign(Point.prototype, {
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image" src="/uploads/avatars.jpg" alt="Zhuda">
           <p class="site-author-name" itemprop="name">Zhuda</p>
@@ -562,7 +503,7 @@ Object.assign(Point.prototype, {
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -573,7 +514,7 @@ Object.assign(Point.prototype, {
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -584,7 +525,7 @@ Object.assign(Point.prototype, {
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -630,22 +571,6 @@ Object.assign(Point.prototype, {
       </section>
 
       
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#本文节选自阮一峰ES6教程"><span class="nav-number">1.</span> <span class="nav-text">本文节选自阮一峰ES6教程</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
 
       
 
@@ -662,7 +587,7 @@ Object.assign(Point.prototype, {
         <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
