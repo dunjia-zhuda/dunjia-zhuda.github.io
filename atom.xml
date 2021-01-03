@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-16T14:01:06.658Z</updated>
+  <updated>2021-01-03T02:51:15.140Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>JS编译原理</title>
-    <link href="http://yoursite.com/2020/08/16/%E5%86%99%E7%82%B9%E5%95%A5/"/>
-    <id>http://yoursite.com/2020/08/16/写点啥/</id>
+    <link href="http://yoursite.com/2020/08/16/abc/test/"/>
+    <id>http://yoursite.com/2020/08/16/abc/test/</id>
     <published>2020-08-16T13:15:26.000Z</published>
-    <updated>2020-08-16T14:01:06.658Z</updated>
+    <updated>2021-01-03T02:51:15.140Z</updated>
     
     <summary type="html">
     
@@ -29,10 +29,8 @@
       
         
         
-          &lt;p&gt;#编译原理&lt;br&gt;源代码执行之前会经历三个步骤，统称为‘编译’&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;分词/词法分析&lt;ul&gt;
-&lt;li&gt;主要将字符组成的字符串分解成有意义的代码块，这些代码块被称为词法单元，如var a =
+          &lt;p&gt;nbbbbbb&lt;/p&gt;
+
         
       
     
@@ -68,6 +66,35 @@
     
     
       <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS编译原理</title>
+    <link href="http://yoursite.com/2020/08/16/%E5%86%99%E7%82%B9%E5%95%A5/"/>
+    <id>http://yoursite.com/2020/08/16/写点啥/</id>
+    <published>2020-08-16T13:15:26.000Z</published>
+    <updated>2020-08-16T14:01:06.658Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;#编译原理&lt;br&gt;源代码执行之前会经历三个步骤，统称为‘编译’&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分词/词法分析&lt;ul&gt;
+&lt;li&gt;主要将字符组成的字符串分解成有意义的代码块，这些代码块被称为词法单元，如var a =
+        
+      
+    
+    </summary>
+    
+      <category term="JS" scheme="http://yoursite.com/categories/JS/"/>
+    
+    
+      <category term="JS" scheme="http://yoursite.com/tags/JS/"/>
     
   </entry>
   
