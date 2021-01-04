@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="CSS,换行,">
+  <meta name="keywords" content="CSS,性能优化,">
 
 
 
@@ -96,18 +96,18 @@
 
 
 
-<meta name="description" content="##white-spacewhite-space:nowrap永不换行，只有存在时才换行 white-space:pre：空格和换行符全都被保留了下来！不过自动换行还是没了。保留，所以pre其实是preserve的缩写，这样就好记了。 white-space:pre-wrap：显然pre-wrap就是preserve+wrap，保留空格和换行符，且可以自动换行。 white-space:pre-l">
-<meta name="keywords" content="CSS,换行">
+<meta name="description" content="#CSS加载会造成阻塞吗？1、css加载不会阻塞dom树的解析2、css加载会阻塞dom树的渲染3、css加载会阻塞后面js语句的执行 在一个html文件中，js放在前面，css放在后面，可以很好的避免css阻塞状况的发生。css语句后面不能再放js语句，否则改语句就会等到css执行完成后才执行。 #如何提高css加载速度？1、使用CDN(因为CDN会根据你的网络状况，替你挑选最近的一个具有缓存内">
+<meta name="keywords" content="CSS,性能优化">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS3换行">
-<meta property="og:url" content="http://yoursite.com/2020/01/13/css换行系列/index.html">
+<meta property="og:title" content="CSS加载会造成阻塞吗？">
+<meta property="og:url" content="http://yoursite.com/2020/01/13/css/css加载阻塞/index.html">
 <meta property="og:site_name" content="雨虎座">
-<meta property="og:description" content="##white-spacewhite-space:nowrap永不换行，只有存在时才换行 white-space:pre：空格和换行符全都被保留了下来！不过自动换行还是没了。保留，所以pre其实是preserve的缩写，这样就好记了。 white-space:pre-wrap：显然pre-wrap就是preserve+wrap，保留空格和换行符，且可以自动换行。 white-space:pre-l">
+<meta property="og:description" content="#CSS加载会造成阻塞吗？1、css加载不会阻塞dom树的解析2、css加载会阻塞dom树的渲染3、css加载会阻塞后面js语句的执行 在一个html文件中，js放在前面，css放在后面，可以很好的避免css阻塞状况的发生。css语句后面不能再放js语句，否则改语句就会等到css执行完成后才执行。 #如何提高css加载速度？1、使用CDN(因为CDN会根据你的网络状况，替你挑选最近的一个具有缓存内">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-01-13T02:17:16.754Z">
+<meta property="og:updated_time" content="2021-01-04T01:07:36.882Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS3换行">
-<meta name="twitter:description" content="##white-spacewhite-space:nowrap永不换行，只有存在时才换行 white-space:pre：空格和换行符全都被保留了下来！不过自动换行还是没了。保留，所以pre其实是preserve的缩写，这样就好记了。 white-space:pre-wrap：显然pre-wrap就是preserve+wrap，保留空格和换行符，且可以自动换行。 white-space:pre-l">
+<meta name="twitter:title" content="CSS加载会造成阻塞吗？">
+<meta name="twitter:description" content="#CSS加载会造成阻塞吗？1、css加载不会阻塞dom树的解析2、css加载会阻塞dom树的渲染3、css加载会阻塞后面js语句的执行 在一个html文件中，js放在前面，css放在后面，可以很好的避免css阻塞状况的发生。css语句后面不能再放js语句，否则改语句就会等到css执行完成后才执行。 #如何提高css加载速度？1、使用CDN(因为CDN会根据你的网络状况，替你挑选最近的一个具有缓存内">
 
 
 
@@ -136,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/01/13/css换行系列/">
+  <link rel="canonical" href="http://yoursite.com/2020/01/13/css/css加载阻塞/">
 
 
 
 
 
-  <title>CSS3换行 | 雨虎座</title>
+  <title>CSS加载会造成阻塞吗？ | 雨虎座</title>
   
 
 
@@ -285,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/13/css换行系列/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/13/css/css加载阻塞/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="雨虎">
@@ -302,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CSS3换行</h1>
+          <h1 class="post-title" itemprop="name headline">CSS加载会造成阻塞吗？</h1>
         
 
         <div class="post-meta">
@@ -314,7 +314,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-13T10:12:25+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-13T09:29:25+08:00">
                 2020-01-13
               </time>
             
@@ -374,14 +374,24 @@
       
 
       
-        <p>##white-space<br>white-space:nowrap<br>永不换行，只有<br>存在时才换行</p>
-<p>white-space:pre：<br>空格和换行符全都被保留了下来！不过自动换行还是没了。保留，所以pre其实是preserve的缩写，这样就好记了。</p>
-<p>white-space:pre-wrap：<br>显然pre-wrap就是preserve+wrap，保留空格和换行符，且可以自动换行。</p>
-<p>white-space:pre-line：<br>空格被合并了，但是换行符可以发挥作用，line应该是new line的意思，自动换行还在，所以pre-line其实是preservenew line+wrap。</p>
-<p>##word-break<br>word-break:keep-all：<br>所有“单词”一律不拆分换行，注意，我这里的“单词”包括连续的中文字符（还有日文、韩文等），或者可以理解为只有空格可以触发自动换行</p>
-<p>word-break:break-all：<br>所有单词碰到边界一律拆分换行，不管你是incomprehensibilities这样一行都显示不下的单词，还是long这样很短的单词，只要碰到边界，都会被强制拆分换行。所以用word-break:break-all时要慎重呀。</p>
-<p>word-wrap又叫做overflow-wrap：</p>
-<p>这个属性也是控制单词如何被拆分换行的，实际上是作为word-break的互补，它只有两个值：normal | break-word，那我们看下break-word：<br>终于达到了上文我们希望的效果，只有当一个单词一整行都显示不下时，才会拆分换行该单词。所以我觉得overflow-wrap更好理解好记一些，overflow，只有长到溢出的单词才会被强制拆分换行！（其实前面的word-break属性除了列出的那三个值外，也有个break-word值，效果跟这里的word-wrap:break-word一样，然而只有Chrome、Safari等部分浏览器支持）</p>
+        <p>#CSS加载会造成阻塞吗？<br>1、css加载不会阻塞dom树的解析<br>2、css加载会阻塞dom树的渲染<br>3、css加载会阻塞后面js语句的执行</p>
+<p>在一个html文件中，js放在前面，css放在后面，可以很好的避免css阻塞状况的发生。css语句后面不能再放js语句，否则改语句就会等到css执行完成后才执行。</p>
+<p>#如何提高css加载速度？<br>1、使用CDN(因为CDN会根据你的网络状况，替你挑选最近的一个具有缓存内容的节点为你提供资源，因此可以减少加载时间)</p>
+<p>2、对css进行压缩(可以用很多打包工具，比如webpack,gulp等，也可以通过开启gzip压缩)</p>
+<p>3、合理的使用缓存(设置cache-control,expires,以及E-tag都是不错的，不过要注意一个问题，就是文件更新后，你要避免缓存而带来的影响。其中一个解决防范是在文件名字后面加一个版本号)</p>
+<p>4、减少http请求数，将多个css文件合并，或者是干脆直接写成内联样式(内联样式的一个缺点就是不能缓存)</p>
+<p>#浏览器渲染方式？<br>主要有webkit渲染过程和gecko渲染过程</p>
+<p>渲染流程如下</p>
+<p>1、HTML解析文件，生成DOM tree，解析css文件生成CSSOM Tree<br>2、将DOM Tree和CSSOM Tree结合，生成Render Tree（渲染树）<br>3、根据Render Tree渲染绘制，将像素渲染到屏幕上</p>
+<p>从流程我们可以看出来</p>
+<p>1、DOM解析和CSS解析是两个并行的进程，所以这也解释了为什么CSS加载不会阻塞DOM的解析。</p>
+<p>2、然而，由于Render Tree是依赖于DOM Tree和CSSOM Tree的，所以他必须等待到CSSOM Tree构建完成，也就是CSS资源加载完成(或者CSS资源加载失败)后，才能开始渲染。因此，CSS加载是会阻塞Dom的渲染的。</p>
+<p>3、由于js可能会操作之前的Dom节点和css样式，因此浏览器会维持html中css和js的顺序。因此，样式表会在后面的js执行前先加载执行完毕。所以css会阻塞后面js的执行。</p>
+<p>#DOMContentLoaded<br>对于浏览器来说，页面加载主要有两个事件，一个是DOMContentLoaded，另一个是onLoad。而onLoad没什么好说的，就是等待页面的所有资源都加载完成才会触发，这些资源包括css、js、图片视频等。</p>
+<p>而DOMContentLoaded，顾名思义，就是当页面的内容解析完成后，则触发该事件。</p>
+<p>我们可以看到，只有在css加载完成后，才会触发DOMContentLoaded事件。因此，我们可以得出结论：</p>
+<p>1、如果页面中同时存在css和js，并且存在js在css后面，则DOMContentLoaded事件会在css加载完后才执行。</p>
+<p>2、其他情况下，DOMContentLoaded都不会等待css加载，并且DOMContentLoaded事件也不会等待图片、视频等其他资源加载。</p>
 
       
     </div>
@@ -412,7 +422,7 @@
           
             <a href="/tags/CSS/" rel="tag"><i class="fa fa-tag"></i>CSS</a>
           
-            <a href="/tags/换行/" rel="tag"><i class="fa fa-tag"></i>换行</a>
+            <a href="/tags/性能优化/" rel="tag"><i class="fa fa-tag"></i>性能优化</a>
           
         </div>
       
@@ -425,8 +435,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/01/13/css水平居中的方法/" rel="next" title="CSS3水平居中的方法">
-                <i class="fa fa-chevron-left"></i> CSS3水平居中的方法
+              <a href="/2019/09/15/js/四种常见的for循环/" rel="next" title="四种for循环的区别">
+                <i class="fa fa-chevron-left"></i> 四种for循环的区别
               </a>
             
           </div>
@@ -435,8 +445,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/08/16/markdown/" rel="prev" title="markdown语法">
-                markdown语法 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/01/13/css/css水平居中的方法/" rel="prev" title="CSS3水平居中的方法">
+                CSS3水平居中的方法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -504,7 +514,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

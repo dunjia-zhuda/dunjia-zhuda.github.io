@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="CSS,水平居中和垂直居中,">
+  <meta name="keywords" content="CSS,换行,">
 
 
 
@@ -96,18 +96,18 @@
 
 
 
-<meta name="description" content="#块级元素与行内元素的居中 块级元素居中 html代码部分 &amp;lt;div class=&amp;quot;parent&amp;quot;&amp;gt;    &amp;lt;div class=&amp;quot;child&amp;quot;&amp;gt;child&amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;行内元素居中 html代码部分 &amp;lt;div class=&amp;quot;parent&amp;quot;&amp;gt;    &amp;lt;span">
-<meta name="keywords" content="CSS,水平居中和垂直居中">
+<meta name="description" content="##white-spacewhite-space:nowrap永不换行，只有存在时才换行 white-space:pre：空格和换行符全都被保留了下来！不过自动换行还是没了。保留，所以pre其实是preserve的缩写，这样就好记了。 white-space:pre-wrap：显然pre-wrap就是preserve+wrap，保留空格和换行符，且可以自动换行。 white-space:pre-l">
+<meta name="keywords" content="CSS,换行">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS3水平居中的方法">
-<meta property="og:url" content="http://yoursite.com/2020/01/13/css水平居中的方法/index.html">
+<meta property="og:title" content="CSS3换行">
+<meta property="og:url" content="http://yoursite.com/2020/01/13/css/css换行系列/index.html">
 <meta property="og:site_name" content="雨虎座">
-<meta property="og:description" content="#块级元素与行内元素的居中 块级元素居中 html代码部分 &amp;lt;div class=&amp;quot;parent&amp;quot;&amp;gt;    &amp;lt;div class=&amp;quot;child&amp;quot;&amp;gt;child&amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;行内元素居中 html代码部分 &amp;lt;div class=&amp;quot;parent&amp;quot;&amp;gt;    &amp;lt;span">
+<meta property="og:description" content="##white-spacewhite-space:nowrap永不换行，只有存在时才换行 white-space:pre：空格和换行符全都被保留了下来！不过自动换行还是没了。保留，所以pre其实是preserve的缩写，这样就好记了。 white-space:pre-wrap：显然pre-wrap就是preserve+wrap，保留空格和换行符，且可以自动换行。 white-space:pre-l">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-01-13T02:06:56.833Z">
+<meta property="og:updated_time" content="2021-01-04T01:07:33.805Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS3水平居中的方法">
-<meta name="twitter:description" content="#块级元素与行内元素的居中 块级元素居中 html代码部分 &amp;lt;div class=&amp;quot;parent&amp;quot;&amp;gt;    &amp;lt;div class=&amp;quot;child&amp;quot;&amp;gt;child&amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;行内元素居中 html代码部分 &amp;lt;div class=&amp;quot;parent&amp;quot;&amp;gt;    &amp;lt;span">
+<meta name="twitter:title" content="CSS3换行">
+<meta name="twitter:description" content="##white-spacewhite-space:nowrap永不换行，只有存在时才换行 white-space:pre：空格和换行符全都被保留了下来！不过自动换行还是没了。保留，所以pre其实是preserve的缩写，这样就好记了。 white-space:pre-wrap：显然pre-wrap就是preserve+wrap，保留空格和换行符，且可以自动换行。 white-space:pre-l">
 
 
 
@@ -136,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/01/13/css水平居中的方法/">
+  <link rel="canonical" href="http://yoursite.com/2020/01/13/css/css换行系列/">
 
 
 
 
 
-  <title>CSS3水平居中的方法 | 雨虎座</title>
+  <title>CSS3换行 | 雨虎座</title>
   
 
 
@@ -285,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/13/css水平居中的方法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/13/css/css换行系列/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="雨虎">
@@ -302,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CSS3水平居中的方法</h1>
+          <h1 class="post-title" itemprop="name headline">CSS3换行</h1>
         
 
         <div class="post-meta">
@@ -314,7 +314,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-13T09:47:25+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-13T10:12:25+08:00">
                 2020-01-13
               </time>
             
@@ -374,99 +374,14 @@
       
 
       
-        <p>#块级元素与行内元素的居中</p>
-<p>块级元素居中 html代码部分</p>
-<pre><code>&lt;div class=&quot;parent&quot;&gt;
-   &lt;div class=&quot;child&quot;&gt;child&lt;/div&gt;
-&lt;/div&gt;</code></pre><p>行内元素居中 html代码部分</p>
-<pre><code>&lt;div class=&quot;parent&quot;&gt;
-   &lt;span class=&quot;child&quot;&gt;child&lt;/span&gt;
-&lt;/div&gt;</code></pre><p>##水平居中<br>01 行内元素 text-align: center;</p>
-<p><code>.parent {
-   text-align: center;
-}</code></p>
-<p>02 块级元素 margin: auto;<br>（低版本浏览器还需要设置 text-align: center;）</p>
-<p><code>.parent {
-    text-align: center; 
-}
-.child {
-    width: 100px;
-    margin: auto; 
-    border: 1px solid blue;
-}</code></p>
-<p>##垂直居中<br>01 行内元素（单行文字垂直居中）：设置 line-height = height</p>
-<p><code>.parent {
-   height: 200px;
-   line-height: 200px;
-   border: 1px solid red;
-}</code></p>
-<p>02 块级元素：绝对定位（需要提前知道尺寸）</p>
-<p>优点：兼容性不错<br>缺点：需要提前知道尺寸，margin-top: -(高度的一半); margin-left: -(宽度的一半);</p>
-<p><code>.parent {
-    position: relative;
-    height: 200px;
-}</code></p>
-<p><code>.child {
-    width: 80px;
-    height: 40px;
-    background: blue;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-top: -20px;
-    margin-left: -40px;
-}</code></p>
-<p>03 块级元素：绝对定位 + transform</p>
-<p>优点：不需要提前知道尺寸<br>缺点：兼容性不好</p>
-<p><code>.parent {
-    position: relative;
-    height: 200px;
-}</code></p>
-<p><code>.child {
-    width: 80px;
-    height: 40px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: blue;
-}</code></p>
-<p>04 块级元素：绝对定位 + margin: auto;</p>
-<p>优点：不需要提前知道尺寸，兼容性好<br>缺点：这个方法是我最喜欢用的一个，要说缺点的话，我目前还不知道。<br>此方法出自张鑫旭老师的博客 小tip: margin:auto实现绝对定位元素的水平垂直居中</p>
-<p><code>.parent {
-    position: relative;
-    height: 200px;
-}</code></p>
-<p><code>.child {
-    width: 80px;
-    height: 40px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    background: blue;
-}</code></p>
-<p>05 块级元素：padding</p>
-<p>缺点：如果高度固定，需要提前计算尺寸（只在某些特定情况适用）。</p>
-<p><code>.parent {
-    padding: 5% 0;
-}</code></p>
-<p><code>.child {
-    padding: 10% 0;
-    background: blue;
-}</code></p>
-<p>06块级元素：display: table-cell</p>
-<p><code>.parent {
-    width: 600px;
-    height: 200px;
-    border: 1px solid red;
-    display: table;
-}</code></p>
-<p><code>.child {
-    display: table-cell;
-    vertical-align: middle;</code></p>
+        <p>##white-space<br>white-space:nowrap<br>永不换行，只有<br>存在时才换行</p>
+<p>white-space:pre：<br>空格和换行符全都被保留了下来！不过自动换行还是没了。保留，所以pre其实是preserve的缩写，这样就好记了。</p>
+<p>white-space:pre-wrap：<br>显然pre-wrap就是preserve+wrap，保留空格和换行符，且可以自动换行。</p>
+<p>white-space:pre-line：<br>空格被合并了，但是换行符可以发挥作用，line应该是new line的意思，自动换行还在，所以pre-line其实是preservenew line+wrap。</p>
+<p>##word-break<br>word-break:keep-all：<br>所有“单词”一律不拆分换行，注意，我这里的“单词”包括连续的中文字符（还有日文、韩文等），或者可以理解为只有空格可以触发自动换行</p>
+<p>word-break:break-all：<br>所有单词碰到边界一律拆分换行，不管你是incomprehensibilities这样一行都显示不下的单词，还是long这样很短的单词，只要碰到边界，都会被强制拆分换行。所以用word-break:break-all时要慎重呀。</p>
+<p>word-wrap又叫做overflow-wrap：</p>
+<p>这个属性也是控制单词如何被拆分换行的，实际上是作为word-break的互补，它只有两个值：normal | break-word，那我们看下break-word：<br>终于达到了上文我们希望的效果，只有当一个单词一整行都显示不下时，才会拆分换行该单词。所以我觉得overflow-wrap更好理解好记一些，overflow，只有长到溢出的单词才会被强制拆分换行！（其实前面的word-break属性除了列出的那三个值外，也有个break-word值，效果跟这里的word-wrap:break-word一样，然而只有Chrome、Safari等部分浏览器支持）</p>
 
       
     </div>
@@ -497,7 +412,7 @@
           
             <a href="/tags/CSS/" rel="tag"><i class="fa fa-tag"></i>CSS</a>
           
-            <a href="/tags/水平居中和垂直居中/" rel="tag"><i class="fa fa-tag"></i>水平居中和垂直居中</a>
+            <a href="/tags/换行/" rel="tag"><i class="fa fa-tag"></i>换行</a>
           
         </div>
       
@@ -510,8 +425,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/01/13/css加载阻塞/" rel="next" title="CSS加载会造成阻塞吗？">
-                <i class="fa fa-chevron-left"></i> CSS加载会造成阻塞吗？
+              <a href="/2020/01/13/css/css水平居中的方法/" rel="next" title="CSS3水平居中的方法">
+                <i class="fa fa-chevron-left"></i> CSS3水平居中的方法
               </a>
             
           </div>
@@ -520,8 +435,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/01/13/css换行系列/" rel="prev" title="CSS3换行">
-                CSS3换行 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/08/16/其他/markdown/" rel="prev" title="markdown语法">
+                markdown语法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -589,7 +504,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

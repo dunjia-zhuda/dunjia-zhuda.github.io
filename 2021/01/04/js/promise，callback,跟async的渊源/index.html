@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="ES6,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="雨虎座" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/uploads/avatars.jpg?v=5.1.2">
+
+
+
+
+
+
+<meta name="description" content="导言最近在写项目业务代码的时候，遇到一个需求。 遍历一个数组并执行元素对应的$ref对象的方法的回调，其中一个元素要求等待请求返回之后根据返回数据去判断是与否,最后根据所有返回的数据判断是否通过。我一开始是这么写的。 function { ​        const array = [1,2,3,4,5] ​        let  array2 = [] ​        array.forE">
+<meta name="keywords" content="ES6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="杂说">
+<meta property="og:url" content="http://yoursite.com/2021/01/04/js/promise，callback,跟async的渊源/index.html">
+<meta property="og:site_name" content="雨虎座">
+<meta property="og:description" content="导言最近在写项目业务代码的时候，遇到一个需求。 遍历一个数组并执行元素对应的$ref对象的方法的回调，其中一个元素要求等待请求返回之后根据返回数据去判断是与否,最后根据所有返回的数据判断是否通过。我一开始是这么写的。 function { ​        const array = [1,2,3,4,5] ​        let  array2 = [] ​        array.forE">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-01-04T07:51:46.649Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="杂说">
+<meta name="twitter:description" content="导言最近在写项目业务代码的时候，遇到一个需求。 遍历一个数组并执行元素对应的$ref对象的方法的回调，其中一个元素要求等待请求返回之后根据返回数据去判断是与否,最后根据所有返回的数据判断是否通过。我一开始是这么写的。 function { ​        const array = [1,2,3,4,5] ​        let  array2 = [] ​        array.forE">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2021/01/04/js/promise，callback,跟async的渊源/">
+
+
+
+
+
+  <title>杂说 | 雨虎座</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">雨虎座</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">素问玄机</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/04/js/promise，callback,跟async的渊源/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="雨虎">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatars.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="雨虎座">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">杂说</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-01-04T15:40:26+08:00">
+                2021-01-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ES6/" itemprop="url" rel="index">
+                    <span itemprop="name">ES6</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="导言"><a href="#导言" class="headerlink" title="导言"></a>导言</h1><p>最近在写项目业务代码的时候，遇到一个需求。</p>
+<p>遍历一个数组并执行元素对应的$ref对象的方法的回调，其中一个元素要求等待请求返回之后根据返回数据去判断是与否,最后根据所有返回的数据判断是否通过。我一开始是这么写的。</p>
+<p>function {</p>
+<p>​        const array = [1,2,3,4,5]</p>
+<p>​        let  array2 = []</p>
+<p>​        array.forEach(item =&gt; {</p>
+<p>​        //flag只能返回true或者false</p>
+<p>​        let flag = this.$refs[item].child.onValidate()</p>
+<p>​        array2.push(flag)</p>
+<p>​        …</p>
+<p>​    })</p>
+<p>}</p>
+<p>let valid = array2.every(x =&gt; x.flag)</p>
+<p>预期是flag是按顺序返回，实际上并不是，因为第三个元素的onValidate方法需要请求后台接口，属于异步函数，forEach并没有等待请求返回就执行完毕了。所以array2的返回值是</p>
+<p>[true,true,promise,false]</p>
+<p>可以看到，我们在foreach执行完后打印出来的是promise执行中的一个状态。 </p>
+<p>后来改用async await语法糖，因为不熟悉的原因乱用，导致改成如下这样子。</p>
+<p>async function {</p>
+<p>​        const array = [1,2,3,4,5]</p>
+<p>​        let  array2 = []</p>
+<p>​        await array.forEach(async item =&gt; {</p>
+<p>​        //flag只能返回true或者false</p>
+<p>​        let flag = await  this.$refs[item].child.onValidate()</p>
+<p>​        array2.push(flag)</p>
+<p>​        …</p>
+<p>​    })</p>
+<p>}</p>
+<p>let valid = array2.every(x =&gt; x.flag)</p>
+<p>这个返回值为[],虽然后来我用for循环实现了这个需求，但是我对自己一知半解的态度很不满意。所以这篇文章主要是用来追根溯源，寻找js进程执行的真谛！</p>
+<h1 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h1><p>搜索MDN可以看到关于forEach的下面这段解释：</p>
+<p><code>forEach()``callback</code>为数组中的每个元素以升序调用一次提供的函数。对于已删除或未初始化的索引属性，不会调用它。（对于稀疏数组，<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#sparseArray" target="_blank" rel="noopener">请参见下面的示例</a>。）</p>
+<p><code>callback</code> 用三个参数调用：</p>
+<ol>
+<li>元素的值</li>
+<li>元素的索引</li>
+<li>遍历的Array对象</li>
+</ol>
+<p>如果<code>thisArg</code>提供了参数<code>forEach()</code>，它将用作回调的<code>this</code>值。</p>
+<h1 id="callback"><a href="#callback" class="headerlink" title="callback"></a>callback</h1><p>A callback is a function that is passed as an argument to another function and is executed after its parent function has completed。</p>
+<p>回调函数（callback）是一个函数，作为一个参数，被传进另一个函数里面，当另一个函数体执行完成后，再去执行这个传入的函数。</p>
+<p>举个例子：</p>
+<p>let array = [1,2,3,4]</p>
+<p>array.forEach(item =&gt; {</p>
+<p>​    item += 2;</p>
+<p>})</p>
+<p>我们抽离出function(item){</p>
+<p>​    item += 2;</p>
+<p>}这个作为回调函数，让他传入到forEach()方法里面。</p>
+<p>通过阅读forEach源码可知，forEach内部执行了一个while循环，对数组的每一项绑定传入的函数（也就是上面说的回调函数）进行绑定操作。</p>
+<p> 并且在源码里面并没有看到forEach方法使用async/await来处理异步关系，所以可以推断forEach是一个异步函数，不能使用async/await的方式阻塞程序运行。</p>
+<p>由此可以解释上面那个案例，当未使用async/await时，正常124可以返回数据，而3却是promise（pending）状态。</p>
+<h1 id="阻塞"><a href="#阻塞" class="headerlink" title="阻塞"></a>阻塞</h1><p>如果需要实现上面的需求，也就是需要阻塞到3执行完成后继续往下执行。如何操作？</p>
+<p>函数  –等待–&gt;   子函数 –等待–&gt;   请求promise</p>
+<p>由上图可知需要执行两个等待才可以实现这个方法，其中难实现的就是子函数的等待，我采用的是async/await的方式，不断阻塞程序的进行，直到请求promise返回后函数才进行下一步操作。</p>
+<h1 id="宏任务与微任务"><a href="#宏任务与微任务" class="headerlink" title="宏任务与微任务"></a>宏任务与微任务</h1><p>在讲解上面那些之前，需要先搞清楚js的执行顺序。</p>
+<p>浏览器有两个事件队列</p>
+<p>宏任务队列</p>
+<p>​    setTimeout</p>
+<p>​    setImmediate</p>
+<p>​    MessageChannel</p>
+<p>微任务队列</p>
+<p>​    Promise.then</p>
+<p>​    process.nextTick</p>
+<p>​    MutationObserver</p>
+<p>浏览器执行过程，整个script视为一个大的宏任务，首先将同步代码按顺序执行，途中遇到的宏任务与微任务依次加入到宏任务队列与微任务队列里。</p>
+<p>在每一个宏任务循环里，首先执行同步代码，其次执行微任务，依次循环直到所有宏任务执行完成。</p>
+<p>例子：一个宏任务加两个微任务</p>
+<p>Promise.resolve().then(x =&gt; console.log(1))</p>
+<p>setTimeout(x =&gt; {console.log(2)},100)</p>
+<p>Promise.resolve().then(x =&gt; console.log(3))</p>
+<p>当程序从上往下执行时，视为在script的宏任务执行中，那么立刻执行Promise，将setTimeout视为宏任务加入到宏任务队列中，接着执行Promise，这两个then()加入到微任务队列中。</p>
+<p>实际输出为 1,3,2</p>
+<p>来一个难一点的案例</p>
+<ol>
+<li>console.log(‘1’);</li>
+<li></li>
+<li>setTimeout(function() {</li>
+<li>​    console.log(‘2’);</li>
+<li>​    process.nextTick(function() {</li>
+<li>​        console.log(‘3’);</li>
+<li>​    })</li>
+<li>​    new Promise(function(resolve) {</li>
+<li>​        console.log(‘4’);</li>
+<li>​        resolve();</li>
+<li>​    }).then(function() {</li>
+<li>​        console.log(‘5’)</li>
+<li>​    })</li>
+<li>})</li>
+<li>process.nextTick(function() {</li>
+<li>​    console.log(‘6’);</li>
+<li>})</li>
+<li>new Promise(function(resolve) {</li>
+<li>​    console.log(‘7’);</li>
+<li>​    resolve();</li>
+<li>}).then(function() {</li>
+<li>​    console.log(‘8’)</li>
+<li>})</li>
+<li></li>
+<li>setTimeout(function() {</li>
+<li>​    console.log(‘9’);</li>
+<li>​    process.nextTick(function() {</li>
+<li>​        console.log(‘10’);</li>
+<li>​    })</li>
+<li>​    new Promise(function(resolve) {</li>
+<li>​        console.log(‘11’);</li>
+<li>​        resolve();</li>
+<li>​    }).then(function() {</li>
+<li>​        console.log(‘12’)</li>
+<li>​    })</li>
+<li>})</li>
+</ol>
+<p>解析：</p>
+<p>第一段console.log（1）（同步代码）</p>
+<p>第二段是setTimeout，插入到宏任务队列中，此时hong[“setTimeout1”]，不执行console.log</p>
+<p>第三段process.nextTick()视为微任务，插入到微任务队列，此时wei[“nextTick1”]</p>
+<p>第四段执行new Promise内第一个语句，输出console.log(7).将.then()插入到微任务队列，此时wei[“nextTick1”,”then1”]</p>
+<p>第五段是setTimeout，插入到宏任务队列中，此时hong[“setTimeout1”，“setTimeout2”]，不执行console.log</p>
+<p>在script宏任务中，同步代码输出1,7。然后清空刚刚积累的微任务，在优先级上，nextTick先于then执行。</p>
+<p>微任务输出6,8</p>
+<p>第一轮输出1,7,6,8</p>
+<p>第二轮读取，将刚刚已经执行的代码删除，我们重新按顺序执行一下</p>
+<ol>
+<li>setTimeout(function() {</li>
+<li>​    console.log(‘2’);</li>
+<li>​    process.nextTick(function() {</li>
+<li>​        console.log(‘3’);</li>
+<li>​    })</li>
+<li>​    new Promise(function(resolve) {</li>
+<li>​        console.log(‘4’);</li>
+<li>​        resolve();</li>
+<li>​    }).then(function() {</li>
+<li>​        console.log(‘5’)</li>
+<li>​    })</li>
+<li>})</li>
+<li>setTimeout(function() {</li>
+<li>​    console.log(‘9’);</li>
+<li>​    process.nextTick(function() {</li>
+<li>​        console.log(‘10’);</li>
+<li>​    })</li>
+<li>​    new Promise(function(resolve) {</li>
+<li>​        console.log(‘11’);</li>
+<li>​        resolve();</li>
+<li>​    }).then(function() {</li>
+<li>​        console.log(‘12’)</li>
+<li>​    })</li>
+<li>})</li>
+</ol>
+<p>可以很明显的看到只剩下两个大的setTimeout,一样的先执行第一个setTimeout(宏任务)，</p>
+<p>在宏任务里面，我们可以看到里面包含这样的代码，照上面的一样流程读出来就可以了。</p>
+<ol>
+<li><p>console.log(‘2’);</p>
+</li>
+<li><p>​    process.nextTick(function() {</p>
+</li>
+<li><p>​        console.log(‘3’);</p>
+</li>
+<li><p>​    })</p>
+</li>
+<li><p>​    new Promise(function(resolve) {</p>
+</li>
+<li><p>​        console.log(‘4’);</p>
+</li>
+<li><p>​        resolve();</p>
+</li>
+<li><p>​    }).then(function() {</p>
+</li>
+<li><p>​        console.log(‘5’)</p>
+</li>
+<li><p>​    })</p>
+<p>同步任务2,4,</p>
+<p>微任务3,5</p>
+<p>第二轮输出2，4，3，5</p>
+</li>
+</ol>
+<p>接着执行第二个setTimeout（宏任务），代码如下</p>
+<ol>
+<li>console.log(‘9’);</li>
+<li>​    process.nextTick(function() {</li>
+<li>​        console.log(‘10’);</li>
+<li>​    })</li>
+<li>​    new Promise(function(resolve) {</li>
+<li>​        console.log(‘11’);</li>
+<li>​        resolve();</li>
+<li>​    }).then(function() {</li>
+<li>​        console.log(‘12’)</li>
+<li>​    })</li>
+</ol>
+<p>同步任务9,11</p>
+<p>异步任务10,12</p>
+<p>第三轮输出9,11,10,12</p>
+<p>总的输出顺序一目了然，1，7，6，8，2，4，3，5，9，11，10，12。</p>
+<h4 id="Async-await"><a href="#Async-await" class="headerlink" title="Async/await"></a>Async/await</h4><p>async/await是写异步代码的新方式，以前的方法有回调函数和Promise。<br>async/await是基于Promise实现的，它不能用于普通的回调函数。<br>async/await与Promise一样，是非阻塞的。<br>async/await使得异步代码看起来像同步代码，这正是它的魔力所在。</p>
+<p>事实上，我是采用async/await 进行一个请求的阻塞的，从而让父函数能等待子函数返回的值进行判断。而用promise.then 并不能很好地实现效果。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+    
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ES6/" rel="tag"><i class="fa fa-tag"></i>ES6</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/08/16/其他/markdown/" rel="next" title="markdown语法">
+                <i class="fa fa-chevron-left"></i> markdown语法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/uploads/avatars.jpg" alt="雨虎">
+          <p class="site-author-name" itemprop="name">雨虎</p>
+           
+              <p class="site-description motion-element" itemprop="description">末世浮浇</p>
+          
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1369903412&auto=0&height=66"></iframe>
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/dunjia-zhuda" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#导言"><span class="nav-number">1.</span> <span class="nav-text">导言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#forEach"><span class="nav-number">2.</span> <span class="nav-text">forEach</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#callback"><span class="nav-number">3.</span> <span class="nav-text">callback</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#阻塞"><span class="nav-number">4.</span> <span class="nav-text">阻塞</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#宏任务与微任务"><span class="nav-number">5.</span> <span class="nav-text">宏任务与微任务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Async-await"><span class="nav-number">5.0.0.1.</span> <span class="nav-text">Async/await</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">雨虎</span>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
