@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>雨虎座</title>
+  
+  <subtitle>素问玄机</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2021-04-18T12:13:04.513Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>雨虎</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试</title>
+    <link href="http://yoursite.com/2021/04/18/%E5%BF%83%E5%BE%97/test/"/>
+    <id>http://yoursite.com/2021/04/18/心得/test/</id>
+    <published>2021-04-18T14:21:26.000Z</published>
+    <updated>2021-04-18T12:13:04.513Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;测试&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+      <category term="心得" scheme="http://yoursite.com/categories/%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="心得" scheme="http://yoursite.com/tags/%E5%BF%83%E5%BE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>与家书</title>
+    <link href="http://yoursite.com/2021/01/05/%E5%BF%83%E5%BE%97/%E4%B8%8E%E5%AE%B6%E4%B9%A6/"/>
+    <id>http://yoursite.com/2021/01/05/心得/与家书/</id>
+    <published>2021-01-05T14:21:26.000Z</published>
+    <updated>2021-01-05T14:22:02.648Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;老子有三宝&quot;&gt;&lt;a href=&quot;#老子有三宝&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="心得" scheme="http://yoursite.com/categories/%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="心得" scheme="http://yoursite.com/tags/%E5%BF%83%E5%BE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杂说</title>
+    <link href="http://yoursite.com/2021/01/04/js/promise%EF%BC%8Ccallback,%E8%B7%9Fasync%E7%9A%84%E6%B8%8A%E6%BA%90/"/>
+    <id>http://yoursite.com/2021/01/04/js/promise，callback,跟async的渊源/</id>
+    <published>2021-01-04T07:40:26.000Z</published>
+    <updated>2021-01-04T07:51:46.649Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;导言&quot;&gt;&lt;a href=&quot;#导言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="ES6" scheme="http://yoursite.com/categories/ES6/"/>
+    
+    
+      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>markdown语法</title>
+    <link href="http://yoursite.com/2020/08/16/%E5%85%B6%E4%BB%96/markdown/"/>
+    <id>http://yoursite.com/2020/08/16/其他/markdown/</id>
+    <published>2020-08-16T13:15:26.000Z</published>
+    <updated>2021-01-04T01:09:30.117Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;这是一级标题&quot;&gt;&lt;a href=&quot;#这是一级标题&quot; class=&quot;headerlink&quot; title=&quot;这是一级标题&quot;&gt;&lt;/a&gt;这是一级标题&lt;/h1&gt;&lt;h2 id=&quot;这是二级标题&quot;&gt;&lt;a href=&quot;#这是二级标题&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="markdown" scheme="http://yoursite.com/categories/markdown/"/>
+    
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS3换行</title>
+    <link href="http://yoursite.com/2020/01/13/css/css%E6%8D%A2%E8%A1%8C%E7%B3%BB%E5%88%97/"/>
+    <id>http://yoursite.com/2020/01/13/css/css换行系列/</id>
+    <published>2020-01-13T02:12:25.000Z</published>
+    <updated>2021-01-04T01:07:33.805Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;##white-space&lt;br&gt;white-space:nowrap&lt;br&gt;永不换行，只有&lt;br&gt;存在时才换行&lt;/p&gt;
+&lt;p&gt;white-space:pre：&lt;br&gt;空格和换行符全都被保留了下来！不过自动换行还是没了。保留，所以pre其实是preserve的缩写，这样就好
+        
+      
+    
+    </summary>
+    
+      <category term="CSS" scheme="http://yoursite.com/categories/CSS/"/>
+    
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+      <category term="换行" scheme="http://yoursite.com/tags/%E6%8D%A2%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS3水平居中的方法</title>
+    <link href="http://yoursite.com/2020/01/13/css/css%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+    <id>http://yoursite.com/2020/01/13/css/css水平居中的方法/</id>
+    <published>2020-01-13T01:47:25.000Z</published>
+    <updated>2021-01-04T01:07:39.018Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;#块级元素与行内元素的居中&lt;/p&gt;
+&lt;p&gt;块级元素居中 html代码部分&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;parent&amp;quot;&amp;gt;
+   &amp;lt;div
+        
+      
+    
+    </summary>
+    
+      <category term="CSS" scheme="http://yoursite.com/categories/CSS/"/>
+    
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+      <category term="水平居中和垂直居中" scheme="http://yoursite.com/tags/%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD%E5%92%8C%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS加载会造成阻塞吗？</title>
+    <link href="http://yoursite.com/2020/01/13/css/css%E5%8A%A0%E8%BD%BD%E9%98%BB%E5%A1%9E/"/>
+    <id>http://yoursite.com/2020/01/13/css/css加载阻塞/</id>
+    <published>2020-01-13T01:29:25.000Z</published>
+    <updated>2021-01-04T01:07:36.882Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;#CSS加载会造成阻塞吗？&lt;br&gt;1、css加载不会阻塞dom树的解析&lt;br&gt;2、css加载会阻塞dom树的渲染&lt;br&gt;3、css加载会阻塞后面js语句的执行&lt;/p&gt;
+&lt;p&gt;在一个html文件中，js放在前面，css放在后面，可以很好的避免css阻塞状况的发生。css语句后
+        
+      
+    
+    </summary>
+    
+      <category term="CSS" scheme="http://yoursite.com/categories/CSS/"/>
+    
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+      <category term="性能优化" scheme="http://yoursite.com/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>四种for循环的区别</title>
+    <link href="http://yoursite.com/2019/09/15/js/%E5%9B%9B%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84for%E5%BE%AA%E7%8E%AF/"/>
+    <id>http://yoursite.com/2019/09/15/js/四种常见的for循环/</id>
+    <published>2019-09-15T07:28:00.000Z</published>
+    <updated>2021-01-04T01:07:26.887Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;#for/for in/for of/forEach的区别&lt;br&gt;1、for循环在Array和Object中都可以使用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var arr= [1,4,6,5,2,3,4,5];
+for（var
+        
+      
+    
+    </summary>
+    
+      <category term="JS" scheme="http://yoursite.com/categories/JS/"/>
+    
+    
+      <category term="JS" scheme="http://yoursite.com/tags/JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS基础对象及使用方法</title>
+    <link href="http://yoursite.com/2019/09/10/js/JS%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E8%B7%9F%E6%96%B9%E6%B3%95/"/>
+    <id>http://yoursite.com/2019/09/10/js/JS对象属性跟方法/</id>
+    <published>2019-09-10T00:09:26.000Z</published>
+    <updated>2021-01-04T01:09:26.918Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;##Array对象##&lt;/p&gt;
+&lt;p&gt;#数组属性：#&lt;br&gt;constructor 返回创建数组对象的原型函数&lt;br&gt;length   设置或返回数组元素的个数&lt;br&gt;prototype  允许我向数组对象添加属性或者方法&lt;/p&gt;
+&lt;p&gt;#数组方法&lt;br&gt;concat()
+        
+      
+    
+    </summary>
+    
+      <category term="JS" scheme="http://yoursite.com/categories/JS/"/>
+    
+    
+      <category term="JS" scheme="http://yoursite.com/tags/JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ES6 解构赋值遇到的一些问题</title>
+    <link href="http://yoursite.com/2019/09/05/js/ES6_%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/"/>
+    <id>http://yoursite.com/2019/09/05/js/ES6_解构赋值/</id>
+    <published>2019-09-05T15:11:25.000Z</published>
+    <updated>2021-01-04T01:09:04.931Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;#ES6解构赋值为我们提取对象中的属性提供了极其大的方便性，但是在使用它时需要注意变量名不能相同，否则会报错&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const item = {
+    username:{
+        name:&amp;quot;zhuzhu&amp;quot;,
+   
+        
+      
+    
+    </summary>
+    
+      <category term="ES6" scheme="http://yoursite.com/categories/ES6/"/>
+    
+    
+      <category term="ES6" scheme="http://yoursite.com/tags/ES6/"/>
+    
+      <category term="解构赋值" scheme="http://yoursite.com/tags/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS基础对象及使用方法</title>
+    <link href="http://yoursite.com/2019/09/03/js/ES6_Class/"/>
+    <id>http://yoursite.com/2019/09/03/js/ES6_Class/</id>
+    <published>2019-09-03T14:15:25.000Z</published>
+    <updated>2021-01-04T01:09:19.233Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;##Array对象##&lt;br&gt;数组属性：&lt;br&gt;constructor 返回创建数组对象的原型函数&lt;br&gt;length   设置或返回数组元素的个数&lt;br&gt;prototype 
+        
+      
+    
+    </summary>
+    
+      <category term="JS" scheme="http://yoursite.com/categories/JS/"/>
+    
+    
+      <category term="JS" scheme="http://yoursite.com/tags/JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>electron 试水</title>
+    <link href="http://yoursite.com/2019/09/01/electron/electron/"/>
+    <id>http://yoursite.com/2019/09/01/electron/electron/</id>
+    <published>2019-09-01T07:29:25.000Z</published>
+    <updated>2021-01-04T01:08:33.754Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#前言&lt;br&gt;1、Vue打包成桌面应用&lt;/p&gt;
+&lt;h2 id=&quot;关于Electron有两种打包方法&quot;&gt;&lt;a href=&quot;#关于Electron有两种打包方法&quot; class=&quot;headerlink&quot; title=&quot;关于Electron有两种打包方法&quot;&gt;&lt;/a&gt;关于Electron有两种打包方法&lt;/h2&gt;&lt;p&gt;第一种：将自己的 vue 项目打包，放到官方的 demo 文件中，改变打包路径&lt;/p&gt;
+&lt;p&gt;第二种：在自己的 vue 的项目中引入插件，然后打包&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="electron" scheme="http://yoursite.com/categories/electron/"/>
+    
+    
+      <category term="electron" scheme="http://yoursite.com/tags/electron/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>github基础操作</title>
+    <link href="http://yoursite.com/2019/08/31/%E5%85%B6%E4%BB%96/github%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2019/08/31/其他/github基础操作/</id>
+    <published>2019-08-30T16:00:00.000Z</published>
+    <updated>2021-01-04T01:09:23.118Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#前言#&lt;/p&gt;
+&lt;h1 id=&quot;github-基础操作&quot;&gt;&lt;a href=&quot;#github-基础操作&quot; class=&quot;headerlink&quot; title=&quot;github 基础操作&quot;&gt;&lt;/a&gt;github 基础操作&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="软件工具" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+  </entry>
+  
+</feed>
