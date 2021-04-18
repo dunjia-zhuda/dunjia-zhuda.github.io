@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[测试]]></title>
-    <url>%2F2021%2F04%2F18%2F%E5%BF%83%E5%BE%97%2Ftest%2F</url>
-    <content type="text"><![CDATA[测试]]></content>
+    <title><![CDATA[hexo博客操作记录]]></title>
+    <url>%2F2021%2F04%2F18%2F%E5%85%B6%E4%BB%96%2Fhexo%2F</url>
+    <content type="text"><![CDATA[hexo博客操作记录hexo server 运行本地服务 hexo clean 清楚缓存 hexo generate 编译 hexo deploy 部署 需要用npm v12版本 去部署，14版本不行]]></content>
       <categories>
-        <category>心得</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>心得</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
