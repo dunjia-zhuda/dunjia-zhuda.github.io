@@ -1920,7 +1920,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #77f922;
+  background: #ffac12;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3082,7 +3082,7 @@ img:hover {
   }
 }
 body {
-  background: url("http://i-7.vcimg.com/trim/617f2252f0bf2aa57d215beaf55db134152615/trim.jpg");
+  background: url("/images/trim.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
